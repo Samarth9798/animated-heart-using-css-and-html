@@ -1,0 +1,125 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background:#262626;
+	animation: animateone 4s linear infinite;
+
+}
+@keyframes animateone
+{
+	0%
+	{
+		background: rgba(0,0,255,0.5);
+	}
+	50%
+	{
+		background:rgba(255,0,0,0.5);
+
+	}
+	100%
+	{
+		background: rgba(0,0,255,0.5);
+	}
+}
+.center
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 100px;
+	transform: translate(-50%,-50%);
+	background: #262626;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	box-shadow: 45px 45px 45px rgba(0,0,0,0.8);
+	z-index: 1;
+	overflow: hidden;
+	
+}
+.center:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+}
+
+.heart
+{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background: rgb(255,0,0);
+	transform: rotate(45deg) translate(10px,10px);
+	animation: animate 4s linear infinite;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+
+}
+.heart:before
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgb(255,0,0);
+	position: absolute;
+	top: -50%;
+	left: 0;
+	animation: animates 4s linear infinite;
+	border-radius: 50%;
+}
+.heart:after
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgb(255,0,0);
+	position: absolute;
+	bottom: 0;
+	right:50%;
+	animation: animates 4s linear infinite;
+	border-radius: 50%;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: rotate(45deg) translate(10px,10px) scale(1);
+		box-shadow: 30px 30px 30px rgba(0,0,0,0.8);
+	
+		background: blue;
+	}
+	50%
+	{
+		transform: rotate(45deg) translate(10px,10px) scale(1.2);
+		box-shadow:25px 25px 25px rgba(0,0,0,0.8);
+		background: red;
+
+	}
+	100%
+	{
+		transform: rotate(45deg) translate(10px,10px) scale(1);
+		box-shadow: 30px 30px 30px rgba(0,0,0,0.8);
+	
+		background: blue;
+	}
+}
+@keyframes animates
+{
+	0%
+	{
+		background: blue;
+	}
+	50%
+	{
+		background: red;
+
+	}
+	100%
+	{
+		background: blue;
+	}
+}
